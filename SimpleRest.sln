@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1703.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRest", "SimpleRest\SimpleRest.csproj", "{9299D512-83E9-4B45-98BE-E6A431A1442C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODM", "ODM\ODM.csproj", "{A37DC1AF-7B2A-4A95-9402-05476A49FA17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9299D512-83E9-4B45-98BE-E6A431A1442C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9299D512-83E9-4B45-98BE-E6A431A1442C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9299D512-83E9-4B45-98BE-E6A431A1442C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A37DC1AF-7B2A-4A95-9402-05476A49FA17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A37DC1AF-7B2A-4A95-9402-05476A49FA17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A37DC1AF-7B2A-4A95-9402-05476A49FA17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A37DC1AF-7B2A-4A95-9402-05476A49FA17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
