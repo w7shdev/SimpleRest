@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ODM.Models;
 using ODM.Context;
+using System.Net;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,11 +21,11 @@ public class BlogController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet( Name ="blogs")]
+    [HttpGet]
     public List<Blog> Get()
     {
         var db  = new BlogContext();
-        return db.Blogs.ToList<Blog>();
+        return db.Blogs!.ToList<Blog>();
     }
 
     [HttpPost]
@@ -50,5 +51,20 @@ public class BlogController : ControllerBase
             return response;
         }
 
+    }
+
+    [HttpGet]
+    [Route("{id}")]
+    public Blog Get(int id)
+    {
+        try
+        {
+            var db = new BlogContext();
+            return (Blog)db.Blogs!.Where<Blog>(blog => blog.id == id);
+        }
+        catch
+        {
+            return new Blog();
+        }
     }
 }
