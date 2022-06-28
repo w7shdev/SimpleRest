@@ -6,16 +6,16 @@ namespace ODM.Context
 {
 	public class BlogContext : DbContext
 	{
-        private const string DatabaseFile = "database.db";
+        private const string DATABASEFILE = "database.db";
 
         public string DbPath {get;}
 		public BlogContext()
 		{
 
             var path = @"full/path/to/your/project";
-            DbPath = System.IO.Path.Join(path, DatabaseFile);
+            DbPath = Path.Join(path, DATABASEFILE);
 		}
-        public DbSet<Blog> Blogs { get; set;}
+        public DbSet<Blog>? Blogs { get; set;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         => options.UseSqlite($"Data Source={DbPath}");
